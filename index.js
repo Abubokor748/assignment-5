@@ -1,25 +1,26 @@
+
 const donationInput = document.getElementById("donation-input");
-const donationButton = document
-  .getElementById("donation-button")
-  .addEventListener("click", function () {
+
+document.getElementById("donation-button").addEventListener("click", () => {
     const addMoneyInput = document.getElementById("input-add-money").value;
-    console.log(addMoneyInput);
     const accountBalance = document.getElementById('account-balance').innerText;
-    console.log(accountBalance);
+
+    const newAddMoneyInput = parseFloat(addMoneyInput);
+    const newAccountBalance = parseFloat(accountBalance);
     
-  if(addMoneyInput <= 0 || isNaN(addMoneyInput) || accountBalance > addMoneyInput){
+  if(!isNaN(addMoneyInput) && newAccountBalance >= newAddMoneyInput && newAddMoneyInput > 0){
     const donatedBalance = document.getElementById("doneted-balance").innerText;
-    console.log(donatedBalance);
-    const addMoneyNumber = parseFloat(addMoneyInput);
+
     const balanceNumber = parseFloat(donatedBalance);
-    const newBalance = addMoneyNumber + balanceNumber;
-    console.log(newBalance);
+    const newBalance = newAddMoneyInput + balanceNumber;
+
     document.getElementById('doneted-balance').innerText = newBalance + ' BDT' ;
-    const afterAccountBalance = accountBalance - addMoneyInput
-    document.getElementById('addMoneyInput').innerText = afterAccountBalance + ' BDT';
+
+    const afterAccountBalance = newAccountBalance - newAddMoneyInput;
+
+    document.getElementById('account-balance').innerText = afterAccountBalance ;
   }
   else{
-    alert('Invalid Number')
-  }
-    
+    alert('Invalid Number');
+  } 
   });
