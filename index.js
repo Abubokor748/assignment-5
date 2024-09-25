@@ -23,6 +23,8 @@ document.getElementById("donation-button").addEventListener("click", () => {
 
     document.getElementById("account-balance").innerText = afterAccountBalance;
 
+    alert("Congratulations, You have donated for mankind");
+
     const div = document.createElement("div");
     div.innerHTML = `
     <h3>${addMoneyInput} Taka is Donated for flood at Nowakhali. </h3>
@@ -33,7 +35,6 @@ document.getElementById("donation-button").addEventListener("click", () => {
     
     document.getElementById('history-container').appendChild('div');
 
-    alert("Congratulations, You have donated for mankind");
   } 
   else {
     alert("Invalid Number");
@@ -67,6 +68,8 @@ document.getElementById("donation-button-2").addEventListener("click", () => {
 
     document.getElementById("account-balance").innerText = afterAccountBalance;
 
+    alert("Congratulations, You have donated for mankind");
+    
     const div = document.createElement("div");
     div.innerHTML = `
     <h3>${addMoneyInput2} Taka is Donated for flood at Feni. </h3>
@@ -77,7 +80,7 @@ document.getElementById("donation-button-2").addEventListener("click", () => {
     
     document.getElementById('history-container').appendChild('div');
 
-    alert("Congratulations, You have donated for mankind");
+
   } else {
     alert("Invalid Number");
   }
@@ -109,6 +112,8 @@ document.getElementById("donation-button-3").addEventListener("click", () => {
     const afterAccountBalance = newAccountBalance - newAddMoneyInput;
 
     document.getElementById("account-balance").innerText = afterAccountBalance;
+    
+    alert("Congratulations, You have donated for mankind");
 
     const div = document.createElement("div");
     div.innerHTML = `
@@ -120,7 +125,6 @@ document.getElementById("donation-button-3").addEventListener("click", () => {
     
     document.getElementById('history-container').appendChild('div');
 
-    alert("Congratulations, You have donated for mankind");
   } else {
     alert("Invalid Number");
   }
